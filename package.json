@@ -9,7 +9,7 @@
     "build": "cross-env NODE_BRANCH=production next build",
     "start:test": "cross-env NODE_ENV=production NODE_BRANCH=development PORT=7070 node server test",
     "start:dev": "cross-env NODE_ENV=production NODE_BRANCH=development PORT=7070 node server",
-    "start": "cross-env NODE_ENV=production NODE_BRANCH=production node server",
+    "start": "cross-env NODE_ENV=production NODE_BRANCH=production node server -p $PORT",
     "export:dev": "rm -rf ./out && cross-env NODE_EXPORT=true NODE_BRANCH=development next export",
     "export:prod": "rm -rf ./out && cross-env NODE_EXPORT=true NODE_BRANCH=production next export",
     "analyze": "cross-env BUNDLE_ANALYZE=true next build",
